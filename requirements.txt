@@ -1,6 +1,7 @@
 streamlit
-langgraph>
-langchain-core>
+langgraph
+langchain-core
 langchain-google-genai
-python-dotenv>
+python-dotenv
 uuid
+
