@@ -47,10 +47,13 @@ def del_api():
 # ==============================
 # SIDEBAR: API KEY MANAGEMENT
 # ==============================
+st.sidebar.title("🤖 ECHO")
+
 st.sidebar.title("🔑 API Key Management")
 current_api = os.environ.get("GOOGLE_API_KEY")
 if current_api:
     st.sidebar.success("✅ API Key is set")
+    st.sidebar.header("🙏Please Delete API Before Leave Page")
     st.sidebar.code(current_api)
     if st.sidebar.button("Delete API Key", type="primary"):
         del_api()
@@ -146,7 +149,6 @@ CONFIG = {"configurable": {"thread_id": st.session_state["thread_id"]}}
 # ==============================
 # SIDEBAR: CHAT HISTORY
 # ==============================
-st.sidebar.title("🤖 ECHO")
 if st.sidebar.button("💬 New Chat"):
     reset_chat()
 
